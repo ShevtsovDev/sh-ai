@@ -141,7 +141,7 @@
 			"name": "Generate Process",
 			"item": [
 				{
-					"name": "Get All Services Schemas",
+					"name": "Get All Generate Processes",
 					"id": "bc355f74-08c2-4aa6-a7f8-caf6a8a1142f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
