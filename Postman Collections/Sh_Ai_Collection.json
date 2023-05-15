@@ -33,7 +33,7 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Get Service By Id",
 					"id": "e7433d08-67a5-4e9d-b5fa-71e83e384f1b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
