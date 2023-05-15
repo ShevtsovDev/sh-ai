@@ -342,7 +342,7 @@
 			"name": "Service Category",
 			"item": [
 				{
-					"name": "Get All Generate Processes",
+					"name": "Get All Service Category",
 					"id": "ce462059-516d-486a-b280-57f0d96ab69e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -354,7 +354,7 @@
 					"response": []
 				},
 				{
-					"name": "Create Generate Process",
+					"name": "Create Service Category",
 					"id": "7b75fb7b-e617-4c3f-9d7c-9f84a63ff31c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
