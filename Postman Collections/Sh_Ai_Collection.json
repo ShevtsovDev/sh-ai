@@ -342,31 +342,42 @@
 			"name": "Service Category",
 			"item": [
 				{
-					"name": "Get All Generate Processes",
+					"name": "Get All Service Category",
 					"id": "ce462059-516d-486a-b280-57f0d96ab69e",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "{{host_local}}/service-category"
 					},
 					"response": []
 				},
 				{
-					"name": "Create Generate Process",
+					"name": "Create Service Category",
 					"id": "7b75fb7b-e617-4c3f-9d7c-9f84a63ff31c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"method": "POST",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Для повседневных задач\",\r\n    \"description\": \"Делегируйте важные и не очень дела ИИ-помощникам. Получите готовый контент-план, статью или соберите отзывы о своем товаре.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host_local}}/service-category"
 					},
 					"response": []
 				},
 				{
-					"name": "Get Generate Process",
+					"name": "Get Service Category",
 					"id": "5bdd9f27-9d9e-419b-9a55-7cdb52ef9002",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -378,7 +389,7 @@
 					"response": []
 				},
 				{
-					"name": "Update Generate Process",
+					"name": "Update Service Category",
 					"id": "aa1ba0c6-e47d-4e22-aa99-1c1a5467c745",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -390,7 +401,7 @@
 					"response": []
 				},
 				{
-					"name": "Remove Generate Process",
+					"name": "Remove Service Category",
 					"id": "a9a4248c-2765-45fa-ab32-789dd2adae09",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
