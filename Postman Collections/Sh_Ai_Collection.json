@@ -354,7 +354,7 @@
 					"response": []
 				},
 				{
-					"name": "Create Service Category",
+					"name": "Create Generate Process",
 					"id": "7b75fb7b-e617-4c3f-9d7c-9f84a63ff31c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
