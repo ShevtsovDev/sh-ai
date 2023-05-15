@@ -21,7 +21,7 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Create Service",
 					"id": "99af78c3-1d91-4515-bf5b-e4e2e44cb017",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
