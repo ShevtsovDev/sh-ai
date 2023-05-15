@@ -123,7 +123,7 @@
 					"response": []
 				},
 				{
-					"name": "Remove Service Copy",
+					"name": "Remove Service Schema",
 					"id": "b4394a0d-bdf8-499e-8e7c-66fdd4c7ed66",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
