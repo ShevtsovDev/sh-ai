@@ -9,7 +9,7 @@
 			"name": "Service",
 			"item": [
 				{
-					"name": "Get Service",
+					"name": "Get All Services",
 					"id": "9434a950-d415-436d-878a-e9c294055450",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
