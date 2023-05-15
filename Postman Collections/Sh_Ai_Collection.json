@@ -16,7 +16,8 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "{{host_local}}/service"
 					},
 					"response": []
 				},
@@ -27,8 +28,51 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzEzLCJpYXQiOjE2ODQxNTM4MTUsImV4cCI6MTY4Njc0NTgxNX0.7m_QsmclxzMCmqMQ7plAPQRZ4qnhOyf5z1QS1PqdEf4"
+							}
+						},
 						"method": "POST",
-						"header": []
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "WB_i",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "description_i",
+									"type": "text"
+								},
+								{
+									"key": "icon",
+									"type": "file",
+									"src": "/C:/Users/ryzen/Downloads/ozon_placemark.svg"
+								},
+								{
+									"key": "schema",
+									"type": "text",
+									"value": "5"
+								},
+								{
+									"key": "category",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{host_local}}/service"
 					},
 					"response": []
 				},
@@ -40,7 +84,23 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{host_local}}/service/:id",
+							"host": [
+								"{{host_local}}"
+							],
+							"path": [
+								"service",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
 					},
 					"response": []
 				},
@@ -52,7 +112,23 @@
 					},
 					"request": {
 						"method": "PATCH",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{host_local}}/service/:id",
+							"host": [
+								"{{host_local}}"
+							],
+							"path": [
+								"service",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
 					},
 					"response": []
 				},
@@ -64,12 +140,269 @@
 					},
 					"request": {
 						"method": "DELETE",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{host_local}}/service/:id",
+							"host": [
+								"{{host_local}}"
+							],
+							"path": [
+								"service",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
 					},
 					"response": []
 				}
 			],
 			"id": "53168c7d-696a-4a48-bf58-942a3f377a17"
+		},
+		{
+			"name": "Service Schema",
+			"item": [
+				{
+					"name": "Get All Services Schemas",
+					"id": "2f726cfb-5880-4c76-9ca6-9fcf730e9b54",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host_local}}/service-schema"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Service Schema",
+					"id": "39ac7668-6a86-4a6a-adf2-b643417b7a4f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"schema\": {\r\n        \"fields\": [\r\n            {\r\n                \"text\": \"Привет\",\r\n                \"name\": \"title\",\r\n                \"groupName\": \"group_one\"\r\n            }\r\n        ],\r\n        \"groups\": [\r\n            {\r\n                \"groupName\": \"group_one\",\r\n                \"title\": \"group title\",\r\n                \"subtitle\": \"group subtitle\"\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host_local}}/service-schema"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Service Schema",
+					"id": "8c781383-7e8c-45cb-b752-35da34b8fb12",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host_local}}/service-schema/:id",
+							"host": [
+								"{{host_local}}"
+							],
+							"path": [
+								"service-schema",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Service Schema",
+					"id": "255a8377-3465-4211-baca-cafd621b3616",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Service Schema",
+					"id": "b4394a0d-bdf8-499e-8e7c-66fdd4c7ed66",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host_local}}/service-schema/:id",
+							"host": [
+								"{{host_local}}"
+							],
+							"path": [
+								"service-schema",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "1dd56c31-eb38-48af-8dc4-ea5f87b03088"
+		},
+		{
+			"name": "Generate Process",
+			"item": [
+				{
+					"name": "Get All Generate Processes",
+					"id": "bc355f74-08c2-4aa6-a7f8-caf6a8a1142f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Create Generate Process",
+					"id": "8d9c68ea-0d6f-4688-9cb4-779a6e94312a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get Generate Process",
+					"id": "e7fddc02-1636-4c3e-8cca-9fa96060509d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update Generate Process",
+					"id": "84a72568-8898-4f8b-8646-145fb28783a6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Generate Process",
+					"id": "f7a68d76-cd07-4fac-814f-2ca02b9a49a6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "6f2d5537-5fe6-4db3-ad42-83ccf05defd4"
+		},
+		{
+			"name": "Service Category",
+			"item": [
+				{
+					"name": "Get All Generate Processes",
+					"id": "ce462059-516d-486a-b280-57f0d96ab69e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Create Generate Process",
+					"id": "7b75fb7b-e617-4c3f-9d7c-9f84a63ff31c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get Generate Process",
+					"id": "5bdd9f27-9d9e-419b-9a55-7cdb52ef9002",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update Generate Process",
+					"id": "aa1ba0c6-e47d-4e22-aa99-1c1a5467c745",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Generate Process",
+					"id": "a9a4248c-2765-45fa-ab32-789dd2adae09",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "324fea60-b1e7-498d-9d76-cc1d68ed6fbb"
 		}
 	]
 }
