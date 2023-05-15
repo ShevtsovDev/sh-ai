@@ -30,6 +30,15 @@
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"WB\",\r\n    \"description\": \"description\",\r\n    \"icon\": \"icon\",\r\n    \"schema\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": "{{host_local}}/service"
 					},
 					"response": []
