@@ -107,7 +107,23 @@
 					},
 					"request": {
 						"method": "DELETE",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{host_local}}/service/:id",
+							"host": [
+								"{{host_local}}"
+							],
+							"path": [
+								"service",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
 					},
 					"response": []
 				}
