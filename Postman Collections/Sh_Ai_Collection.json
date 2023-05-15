@@ -87,7 +87,7 @@
 					"response": []
 				},
 				{
-					"name": "Create Service Schema",
+					"name": "Create Service Copy",
 					"id": "39ac7668-6a86-4a6a-adf2-b643417b7a4f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
