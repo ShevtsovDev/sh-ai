@@ -75,7 +75,7 @@
 			"name": "Service Schema",
 			"item": [
 				{
-					"name": "Get All Services Copy",
+					"name": "Get All Services Schemas",
 					"id": "2f726cfb-5880-4c76-9ca6-9fcf730e9b54",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
