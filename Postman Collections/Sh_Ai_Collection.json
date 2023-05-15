@@ -177,7 +177,7 @@
 					"response": []
 				},
 				{
-					"name": "Update Service Schema",
+					"name": "Update Generate Process",
 					"id": "84a72568-8898-4f8b-8646-145fb28783a6",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
