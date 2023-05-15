@@ -390,7 +390,7 @@
 					"response": []
 				},
 				{
-					"name": "Remove Service Category",
+					"name": "Remove Generate Process",
 					"id": "a9a4248c-2765-45fa-ab32-789dd2adae09",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
