@@ -70,7 +70,23 @@
 					},
 					"request": {
 						"method": "PATCH",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{host_local}}/service/:id",
+							"host": [
+								"{{host_local}}"
+							],
+							"path": [
+								"service",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": null
+								}
+							]
+						}
 					},
 					"response": []
 				},
