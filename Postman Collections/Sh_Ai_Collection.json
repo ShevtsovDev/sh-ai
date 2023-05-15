@@ -189,7 +189,7 @@
 					"response": []
 				},
 				{
-					"name": "Remove Service Schema",
+					"name": "Remove Generate Process",
 					"id": "f7a68d76-cd07-4fac-814f-2ca02b9a49a6",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
