@@ -63,7 +63,12 @@
 								{
 									"key": "schema",
 									"type": "text",
-									"value": "3"
+									"value": "5"
+								},
+								{
+									"key": "category",
+									"value": "",
+									"type": "text"
 								}
 							]
 						},
@@ -332,6 +337,72 @@
 				}
 			],
 			"id": "6f2d5537-5fe6-4db3-ad42-83ccf05defd4"
+		},
+		{
+			"name": "Service Category",
+			"item": [
+				{
+					"name": "Get All Generate Processes",
+					"id": "ce462059-516d-486a-b280-57f0d96ab69e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Create Generate Process",
+					"id": "7b75fb7b-e617-4c3f-9d7c-9f84a63ff31c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get Generate Process",
+					"id": "5bdd9f27-9d9e-419b-9a55-7cdb52ef9002",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update Generate Process",
+					"id": "aa1ba0c6-e47d-4e22-aa99-1c1a5467c745",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Generate Process",
+					"id": "a9a4248c-2765-45fa-ab32-789dd2adae09",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "324fea60-b1e7-498d-9d76-cc1d68ed6fbb"
 		}
 	]
 }
