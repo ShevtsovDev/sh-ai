@@ -73,7 +73,68 @@
 		},
 		{
 			"name": "Service Schema",
-			"item": [],
+			"item": [
+				{
+					"name": "Get All Services Copy",
+					"id": "2f726cfb-5880-4c76-9ca6-9fcf730e9b54",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Create Service Copy",
+					"id": "39ac7668-6a86-4a6a-adf2-b643417b7a4f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get Service By Id Copy",
+					"id": "8c781383-7e8c-45cb-b752-35da34b8fb12",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update Service Copy",
+					"id": "255a8377-3465-4211-baca-cafd621b3616",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Service Copy",
+					"id": "b4394a0d-bdf8-499e-8e7c-66fdd4c7ed66",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				}
+			],
 			"id": "1dd56c31-eb38-48af-8dc4-ea5f87b03088"
 		}
 	]
