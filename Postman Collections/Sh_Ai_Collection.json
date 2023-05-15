@@ -57,7 +57,7 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Remove Service",
 					"id": "ddbc459a-7f67-40b1-a491-5df593e9a632",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
