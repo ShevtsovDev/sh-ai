@@ -1,15 +1,38 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get, HttpCode,
+  HttpException,
+  HttpStatus,
+  Param,
+  Patch,
+  Post,
+  UploadedFile,
+  UseInterceptors,
+} from '@nestjs/common';
 import { ServiceService } from './service.service';
 import { CreateServiceDto } from './dto/create-service.dto';
 import { UpdateServiceDto } from './dto/update-service.dto';
+import { FileInterceptor } from '@nestjs/platform-express';
+import { ExtractToken } from '../auth/decorator/current-user.decorator';
+import { validate } from 'class-validator';
+import { plainToClass } from 'class-transformer';
 
 @Controller('service')
 export class ServiceController {
   constructor(private readonly serviceService: ServiceService) {}
 
   @Post()
-  create(@Body() createServiceDto: CreateServiceDto) {
-    return this.serviceService.create(createServiceDto);
+  @UseInterceptors(FileInterceptor('icon'))
+  async create(@Body() createServiceDto: CreateServiceDto, @UploadedFile() icon: Express.Multer.File, @ExtractToken() token) {
+    const errors = await validate(plainToClass(CreateServiceDto, createServiceDto));
+    if (!errors.length) {
+      return this.serviceService.create(createServiceDto, icon, token);
+    }
+
+    const formattedErrors = errors.map(error => ({[error.property]: Object.values(error.constraints)}))
+    throw new HttpException(formattedErrors, HttpStatus.BAD_REQUEST)
   }
 
   @Get()

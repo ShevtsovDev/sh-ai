@@ -3,21 +3,22 @@ import {
   CreateDateColumn,
   Entity,
   JoinColumn,
-  OneToOne,
+  OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
 import { Service } from '../../service/entities/service.entity';
 
 @Entity()
-export class ServiceSchema {
+export class ServiceCategory {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column({
-    type: 'json',
-  })
-  schema;
+  @Column()
+  name: string;
+
+  @Column()
+  description: string;
 
   @UpdateDateColumn({
     type: 'timestamp',
@@ -31,4 +32,8 @@ export class ServiceSchema {
     default: () => 'CURRENT_TIMESTAMP(6)',
   })
   created_at: Date;
+
+  @OneToMany(() => Service, (service) => service.id)
+  @JoinColumn({ name: 'services' })
+  services: Service[];
 }

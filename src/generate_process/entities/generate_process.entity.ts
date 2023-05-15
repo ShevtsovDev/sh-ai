@@ -1,4 +1,12 @@
-import {Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn} from "typeorm";
+import {
+    Column,
+    CreateDateColumn,
+    Entity,
+    JoinColumn,
+    OneToOne,
+    PrimaryGeneratedColumn,
+    UpdateDateColumn
+} from "typeorm";
 import {Service} from "../../service/entities/service.entity";
 
 @Entity()
@@ -9,14 +17,27 @@ export class GenerateProcess {
     @Column()
     status: number
 
-    @Column()
-    response: string
+    @Column({type: "json"})
+    response;
 
-    @Column()
-    request: string
+    @Column({type: "json"})
+    request
 
     @Column()
     user_id: number
+
+    @UpdateDateColumn({
+        type: 'timestamp',
+        default: () => 'CURRENT_TIMESTAMP(6)',
+        onUpdate: 'CURRENT_TIMESTAMP(6)',
+    })
+    updated_at: Date;
+
+    @CreateDateColumn({
+        type: 'timestamp',
+        default: () => 'CURRENT_TIMESTAMP(6)',
+    })
+    created_at: Date;
 
     @OneToOne(() => Service, service => service.id)
     @JoinColumn({name: 'service'})

@@ -3,11 +3,14 @@ import {
   CreateDateColumn,
   Entity,
   JoinColumn,
+  ManyToOne,
   OneToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
 import { ServiceSchema } from '../../service_schema/entities/service_schema.entity';
+import { ServiceCategory } from '../../service_category/entities/service_category.entity';
+import { IsDefined, IsNotEmpty } from 'class-validator';
 
 @Entity()
 export class Service {
@@ -35,6 +38,11 @@ export class Service {
   created_at: Date;
 
   @OneToOne(() => ServiceSchema, (serviceSchema) => serviceSchema.id)
-  @JoinColumn({ name: 'schema' })
+  @JoinColumn({ name: 'schema'})
+
   schema: ServiceSchema;
+
+  @ManyToOne(() => ServiceCategory, (serviceCategory) => serviceCategory.id)
+  @JoinColumn({name: 'category'})
+  category: ServiceCategory;
 }
