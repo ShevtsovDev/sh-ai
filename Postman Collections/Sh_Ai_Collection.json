@@ -361,7 +361,8 @@
 					},
 					"request": {
 						"method": "POST",
-						"header": []
+						"header": [],
+						"url": "{{host_local}}/service-category"
 					},
 					"response": []
 				},
@@ -378,7 +379,7 @@
 					"response": []
 				},
 				{
-					"name": "Update Generate Process",
+					"name": "Update Service Category",
 					"id": "aa1ba0c6-e47d-4e22-aa99-1c1a5467c745",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -390,7 +391,7 @@
 					"response": []
 				},
 				{
-					"name": "Remove Generate Process",
+					"name": "Remove Service Category",
 					"id": "a9a4248c-2765-45fa-ab32-789dd2adae09",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
