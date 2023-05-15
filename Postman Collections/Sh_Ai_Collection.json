@@ -45,7 +45,7 @@
 					"response": []
 				},
 				{
-					"name": "New Request",
+					"name": "Update Service",
 					"id": "c7b9368f-49cd-431a-a3da-eabcca009c4d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
