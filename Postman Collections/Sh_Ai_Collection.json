@@ -6,6 +6,11 @@
 	},
 	"item": [
 		{
+			"name": "New Folder",
+			"item": [],
+			"id": "53168c7d-696a-4a48-bf58-942a3f377a17"
+		},
+		{
 			"name": "New Request",
 			"id": "9434a950-d415-436d-878a-e9c294055450",
 			"protocolProfileBehavior": {
