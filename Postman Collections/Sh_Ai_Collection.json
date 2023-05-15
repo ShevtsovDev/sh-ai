@@ -136,6 +136,72 @@
 				}
 			],
 			"id": "1dd56c31-eb38-48af-8dc4-ea5f87b03088"
+		},
+		{
+			"name": "Generate Process",
+			"item": [
+				{
+					"name": "Get All Services Schemas",
+					"id": "bc355f74-08c2-4aa6-a7f8-caf6a8a1142f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Create Service Schema",
+					"id": "8d9c68ea-0d6f-4688-9cb4-779a6e94312a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get Service Schema",
+					"id": "e7fddc02-1636-4c3e-8cca-9fa96060509d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update Service Schema",
+					"id": "84a72568-8898-4f8b-8646-145fb28783a6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Service Schema",
+					"id": "f7a68d76-cd07-4fac-814f-2ca02b9a49a6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "6f2d5537-5fe6-4db3-ad42-83ccf05defd4"
 		}
 	]
 }
