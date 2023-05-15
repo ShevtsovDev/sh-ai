@@ -167,7 +167,23 @@
 					},
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{host_local}}/service-schema/:id",
+							"host": [
+								"{{host_local}}"
+							],
+							"path": [
+								"service-schema",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
 					},
 					"response": []
 				},
