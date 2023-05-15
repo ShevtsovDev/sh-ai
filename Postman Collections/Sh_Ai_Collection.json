@@ -63,7 +63,12 @@
 								{
 									"key": "schema",
 									"type": "text",
-									"value": "3"
+									"value": "5"
+								},
+								{
+									"key": "category",
+									"value": "",
+									"type": "text"
 								}
 							]
 						},
