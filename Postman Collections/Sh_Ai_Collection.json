@@ -165,7 +165,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Service Schema",
+					"name": "Get Generate Process",
 					"id": "e7fddc02-1636-4c3e-8cca-9fa96060509d",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
