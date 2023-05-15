@@ -155,15 +155,6 @@
 					"request": {
 						"method": "POST",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"schema\": {\r\n        \"fields\": [\r\n            {\r\n                \"text\": \"Привет\",\r\n                \"name\": \"title\",\r\n                \"groupName\": \"group_one\"\r\n            }\r\n        ],\r\n        \"groups\": [\r\n            {\r\n                \"groupName\": \"group_one\",\r\n                \"title\": \"group title\",\r\n                \"subtitle\": \"group subtitle\"\r\n            }\r\n        ]\r\n    }\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": "{{host_local}}/service-schema"
 					},
 					"response": []
@@ -189,7 +180,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "1"
+									"value": null
 								}
 							]
 						}
@@ -216,23 +207,7 @@
 					},
 					"request": {
 						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "{{host_local}}/service-schema/:id",
-							"host": [
-								"{{host_local}}"
-							],
-							"path": [
-								"service-schema",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "1"
-								}
-							]
-						}
+						"header": []
 					},
 					"response": []
 				}
