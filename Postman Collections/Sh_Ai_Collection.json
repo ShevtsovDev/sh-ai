@@ -111,7 +111,7 @@
 					"response": []
 				},
 				{
-					"name": "Update Service Copy",
+					"name": "Update Service Schema",
 					"id": "255a8377-3465-4211-baca-cafd621b3616",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
