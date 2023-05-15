@@ -31,7 +31,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "asdqweqwe"
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzEzLCJpYXQiOjE2ODQxNTM4MTUsImV4cCI6MTY4Njc0NTgxNX0.7m_QsmclxzMCmqMQ7plAPQRZ4qnhOyf5z1QS1PqdEf4"
 							}
 						},
 						"method": "POST",
@@ -42,27 +42,28 @@
 								{
 									"key": "file",
 									"type": "file",
-									"src": "/C:/Users/ryzen/Downloads/ebb7c5b86934b6629690257243f5d81c.jpeg"
+									"value": null,
+									"disabled": true
 								},
 								{
 									"key": "name",
-									"value": "WB",
+									"value": "WB_i",
 									"type": "text"
 								},
 								{
 									"key": "description",
-									"value": "description",
+									"value": "description_i",
 									"type": "text"
 								},
 								{
 									"key": "icon",
-									"value": "icon",
-									"type": "text"
+									"type": "file",
+									"src": "/C:/Users/ryzen/Downloads/ozon_placemark.svg"
 								},
 								{
 									"key": "schema",
-									"value": "2",
-									"type": "text"
+									"type": "text",
+									"value": "3"
 								}
 							]
 						},
