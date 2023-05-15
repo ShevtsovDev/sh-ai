@@ -378,7 +378,7 @@
 					"response": []
 				},
 				{
-					"name": "Update Generate Process",
+					"name": "Update Service Category",
 					"id": "aa1ba0c6-e47d-4e22-aa99-1c1a5467c745",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
