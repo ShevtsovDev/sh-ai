@@ -29,7 +29,8 @@
 					},
 					"request": {
 						"method": "POST",
-						"header": []
+						"header": [],
+						"url": "{{host_local}}/service"
 					},
 					"response": []
 				},
