@@ -99,7 +99,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Service By Id Copy",
+					"name": "Get Service Schema",
 					"id": "8c781383-7e8c-45cb-b752-35da34b8fb12",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
