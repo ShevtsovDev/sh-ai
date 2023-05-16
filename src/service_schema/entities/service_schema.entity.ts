@@ -31,4 +31,7 @@ export class ServiceSchema {
     default: () => 'CURRENT_TIMESTAMP(6)',
   })
   created_at: Date;
+
+  @OneToOne(() => Service, (service) => service.schema)
+  service: Service
 }

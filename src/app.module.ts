@@ -9,6 +9,7 @@ import { ContentModule } from '../libs/common/src/content/content.module';
 import { HttpModule } from '@nestjs/axios';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { ServiceCategoryModule } from './service_category/service_category.module';
+import { OpenAiModule } from './open-ai/open-ai.module';
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { ServiceCategoryModule } from './service_category/service_category.modul
     ContentModule,
     ConfigModule.forRoot({ isGlobal: true }),
     ServiceCategoryModule,
+    OpenAiModule,
   ],
   controllers: [AppController],
   providers: [AppService],

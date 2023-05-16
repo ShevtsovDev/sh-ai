@@ -20,7 +20,7 @@ export class ServiceCategoryService {
   }
 
   async findAll() {
-    const serviceCategories = await this.serviceCategory.find()
+    const serviceCategories = await this.serviceCategory.find({relations: ['services']})
     return serviceCategories
   }
 

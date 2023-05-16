@@ -33,7 +33,7 @@ export class ServiceCategory {
   })
   created_at: Date;
 
-  @OneToMany(() => Service, (service) => service.id)
+  @OneToMany(() => Service, (service) => service.category)
   @JoinColumn({ name: 'services' })
   services: Service[];
 }

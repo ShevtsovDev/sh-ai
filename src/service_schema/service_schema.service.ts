@@ -37,7 +37,7 @@ export class ServiceSchemaService {
 
   async findOne(id: number) {
     try {
-      const schema = await this.serviceSchemaService.findOne({ where: { id } });
+      const schema = await this.serviceSchemaService.findOne({ where: { id }, relations: ['service'] });
 
       return schema;
     } catch (e) {
