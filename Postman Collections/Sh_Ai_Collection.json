@@ -190,7 +190,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"schema\": {\r\n        \"fields\": [\r\n            {\r\n                \"type\": \"textarea\",\r\n                \"name\": \"title\",\r\n                \"groupName\": \"group_one\"\r\n            }\r\n        ],\r\n        \"groups\": [\r\n            {\r\n                \"groupName\": \"group_one\",\r\n                \"title\": \"group title\",\r\n                \"subtitle\": \"group subtitle\"\r\n            }\r\n        ]\r\n    }\r\n}",
+							"raw": "{\r\n    \"schema\": {\r\n        \"fields\": [\r\n            {\r\n                \"type\": \"text\",\r\n                \"placeholder\": \"text\",\r\n                \"name\": \"text\",\r\n                \"maxLength\": 100,\r\n                \"minLength\": 10,\r\n                \"required\": true\r\n            },\r\n            {\r\n                \"type\": \"textarea\",\r\n                \"placeholder\": \"textarea\",\r\n                \"name\": \"textarea\"\r\n            }\r\n        ],\r\n        \"groups\": [\r\n            {\r\n                \"groupName\": \"productName\",\r\n                \"title\": \"Введите название товара\",\r\n                \"subtitle\": \"Напишите название вашего товара. (прим.: Увлажняющая маска Tutti-Frutti)\"\r\n            },\r\n            {\r\n                \"groupName\": \"keys\",\r\n                \"title\": \"Ключи\",\r\n                \"subtitle\": \"Введите ваши ключевые слова\"\r\n            }\r\n        ]\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
