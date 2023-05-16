@@ -190,7 +190,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"schema\": {\r\n        \"fields\": [\r\n            {\r\n                \"text\": \"Привет\",\r\n                \"name\": \"title\",\r\n                \"groupName\": \"group_one\"\r\n            }\r\n        ],\r\n        \"groups\": [\r\n            {\r\n                \"groupName\": \"group_one\",\r\n                \"title\": \"group title\",\r\n                \"subtitle\": \"group subtitle\"\r\n            }\r\n        ]\r\n    }\r\n}",
+							"raw": "{\r\n    \"schema\": {\r\n        \"fields\": [\r\n            {\r\n                \"type\": \"textarea\",\r\n                \"name\": \"title\",\r\n                \"groupName\": \"group_one\"\r\n            }\r\n        ],\r\n        \"groups\": [\r\n            {\r\n                \"groupName\": \"group_one\",\r\n                \"title\": \"group title\",\r\n                \"subtitle\": \"group subtitle\"\r\n            }\r\n        ]\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
