@@ -35,7 +35,7 @@ export class ServiceService {
 
   async findAll() {
     try {
-      const services = await this.serviceService.find({ relations: ['schema', 'category'] });
+      const services = await this.serviceService.find({ relations: ['schema', 'category', 'prompts'] });
       return services;
     } catch (e) {
       throw new HttpException(e.message, HttpStatus.BAD_REQUEST);
@@ -48,7 +48,7 @@ export class ServiceService {
         where: {
           id,
         },
-        relations: ['schema'],
+        relations: ['schema', 'prompts'],
       });
       return services;
     } catch (e) {

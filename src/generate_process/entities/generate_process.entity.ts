@@ -2,11 +2,11 @@ import {
     Column,
     CreateDateColumn,
     Entity,
-    JoinColumn,
+    JoinColumn, ManyToOne,
     OneToOne,
     PrimaryGeneratedColumn,
-    UpdateDateColumn
-} from "typeorm";
+    UpdateDateColumn,
+} from 'typeorm';
 import {Service} from "../../service/entities/service.entity";
 
 @Entity()
@@ -39,7 +39,7 @@ export class GenerateProcess {
     })
     created_at: Date;
 
-    @OneToOne(() => Service, service => service.id)
+    @ManyToOne(() => Service, service => service.id)
     @JoinColumn({name: 'service'})
     service: Service
 

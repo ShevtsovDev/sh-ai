@@ -10,6 +10,8 @@ import { HttpModule } from '@nestjs/axios';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { ServiceCategoryModule } from './service_category/service_category.module';
 import { OpenAiModule } from './open-ai/open-ai.module';
+import { PromptModule } from './prompt/prompt.module';
+import { GenerateModule } from './generate/generate.module';
 
 @Module({
   imports: [
@@ -21,6 +23,8 @@ import { OpenAiModule } from './open-ai/open-ai.module';
     ConfigModule.forRoot({ isGlobal: true }),
     ServiceCategoryModule,
     OpenAiModule,
+    PromptModule,
+    GenerateModule,
   ],
   controllers: [AppController],
   providers: [AppService],

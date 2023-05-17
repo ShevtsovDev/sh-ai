@@ -2,8 +2,8 @@ import {
   Column,
   CreateDateColumn,
   Entity,
-  JoinColumn,
-  ManyToOne,
+  JoinColumn, ManyToMany,
+  ManyToOne, OneToMany,
   OneToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
@@ -11,6 +11,7 @@ import {
 import { ServiceSchema } from '../../service_schema/entities/service_schema.entity';
 import { ServiceCategory } from '../../service_category/entities/service_category.entity';
 import { IsDefined, IsNotEmpty } from 'class-validator';
+import { Prompt } from '../../prompt/entities/prompt.entity';
 
 @Entity()
 export class Service {
@@ -45,4 +46,8 @@ export class Service {
   @ManyToOne(() => ServiceCategory, (serviceCategory) => serviceCategory.id)
   @JoinColumn({name: 'category'})
   category: ServiceCategory;
+
+  @OneToMany(() => Prompt, prompt => prompt.service)
+  @JoinColumn({name: 'prompts'})
+  prompts: Prompt[]
 }

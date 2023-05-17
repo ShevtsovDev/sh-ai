@@ -8,6 +8,7 @@ import {GenerateProcess} from "./entities/generate_process.entity";
 @Module({
   imports: [TypeOrmModule.forFeature([GenerateProcess]), Service],
   controllers: [GenerateProcessController],
-  providers: [GenerateProcessService]
+  providers: [GenerateProcessService],
+  exports: [GenerateProcessService]
 })
 export class GenerateProcessModule {}

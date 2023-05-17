@@ -1,11 +1,22 @@
 import { Injectable } from '@nestjs/common';
 import { CreateGenerateProcessDto } from './dto/create-generate_process.dto';
 import { UpdateGenerateProcessDto } from './dto/update-generate_process.dto';
+import { InjectRepository } from '@nestjs/typeorm';
+import { GenerateProcess } from './entities/generate_process.entity';
+import { Repository } from 'typeorm';
 
 @Injectable()
 export class GenerateProcessService {
-  create(createGenerateProcessDto: CreateGenerateProcessDto) {
-    return 'This action adds a new generateProcess';
+
+  constructor(
+    @InjectRepository(GenerateProcess)
+    private readonly generateRepository: Repository<GenerateProcess>
+  ) {
+  }
+  async create(createGenerateProcessDto: CreateGenerateProcessDto) {
+    const newProcess = await this.generateRepository.create({...createGenerateProcessDto, service: {id: createGenerateProcessDto.service}})
+    return (await this.generateRepository.save(newProcess))
+
   }
 
   findAll() {
@@ -16,8 +27,10 @@ export class GenerateProcessService {
     return `This action returns a #${id} generateProcess`;
   }
 
-  update(id: number, updateGenerateProcessDto: UpdateGenerateProcessDto) {
-    return `This action updates a #${id} generateProcess`;
+  async update(id: number, updateGenerateProcessDto: UpdateGenerateProcessDto) {
+    const updatedProcess = await this.generateRepository.update(id, { status: updateGenerateProcessDto.status, response: updateGenerateProcessDto.response})
+
+    return updatedProcess
   }
 
   remove(id: number) {
