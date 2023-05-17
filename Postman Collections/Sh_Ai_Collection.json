@@ -47,23 +47,23 @@
 								},
 								{
 									"key": "name",
-									"value": "Ozon",
+									"value": "Описание товара Wildberries",
 									"type": "text"
 								},
 								{
 									"key": "description",
-									"value": "description_ozon",
+									"value": "Получите готовые SEO-тексты, которые поднимут карточку товара в поиске.",
 									"type": "text"
 								},
 								{
 									"key": "icon",
 									"type": "file",
-									"src": "/C:/Users/ryzen/Downloads/ozon_placemark.svg"
+									"src": "/C:/Users/ryzen/Downloads/wb (1).svg"
 								},
 								{
 									"key": "schema",
 									"type": "text",
-									"value": "2"
+									"value": "9"
 								},
 								{
 									"key": "category",
@@ -190,7 +190,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"schema\": {\r\n        \"fields\": [\r\n            {\r\n                \"type\": \"text\",\r\n                \"placeholder\": \"Какой-то текст\",\r\n                \"name\": \"text\",\r\n                \"maxLength\": 100,\r\n                \"minLength\": 10,\r\n                \"required\": true,\r\n                \"groupName\": \"productName\"\r\n            },\r\n            {\r\n                \"type\": \"textarea\",\r\n                \"placeholder\": \"Какой-то текст\",\r\n                \"name\": \"textarea\",\r\n                \"groupName\": \"keys\"\r\n            }\r\n        ],\r\n        \"groups\": [\r\n            {\r\n                \"groupName\": \"productName\",\r\n                \"title\": \"Введите название товара\",\r\n                \"subtitle\": \"Напишите название вашего товара. (прим.: Увлажняющая маска Tutti-Frutti)\"\r\n            },\r\n            {\r\n                \"groupName\": \"keys\",\r\n                \"title\": \"Ключи\",\r\n                \"subtitle\": \"Введите ваши ключевые слова\"\r\n            }\r\n        ]\r\n    }\r\n}",
+							"raw": "{\r\n    \"schema\": {\r\n        \"fields\": [\r\n            {\r\n                \"type\": \"text\",\r\n                \"placeholder\": \"Какой-то текст\",\r\n                \"name\": \"text\",\r\n                \"maxLength\": 100,\r\n                \"minLength\": 10,\r\n                \"required\": true,\r\n                \"groupName\": \"productName\",\r\n                \"label\": \"Название товара\"\r\n            },\r\n            {\r\n                \"type\": \"textarea\",\r\n                \"placeholder\": \"Какой-то текст\",\r\n                \"name\": \"textarea\",\r\n                \"groupName\": \"keys\",\r\n                \"label\": \"Ключи\"\r\n            }\r\n        ],\r\n        \"groups\": [\r\n            {\r\n                \"groupName\": \"productName\",\r\n                \"title\": \"Введите название товара\",\r\n                \"subtitle\": \"Напишите название вашего товара. (прим.: Увлажняющая маска Tutti-Frutti)\"\r\n            },\r\n            {\r\n                \"groupName\": \"keys\",\r\n                \"title\": \"Ключи\",\r\n                \"subtitle\": \"Введите ваши ключевые слова\"\r\n            }\r\n        ]\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -414,6 +414,160 @@
 				}
 			],
 			"id": "324fea60-b1e7-498d-9d76-cc1d68ed6fbb"
+		},
+		{
+			"name": "Prompt",
+			"item": [
+				{
+					"name": "Get All Service Category",
+					"id": "823b25c6-1b3e-4ea2-86c4-5a38a2b32f41",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host_local}}/service-category"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Prompt",
+					"id": "ae209d47-0f97-4210-bc0d-98775b63593c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role\": \"user\",\r\n    \"message\": \"Напиши продающее описание для товара - [productName]. Используй следующие ключевые слова без повторения в соседних предложениях - [keys]\",\r\n    \"service\": 22\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host_local}}/prompt"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Service Category",
+					"id": "36ca2c34-c704-478c-9707-8908dc71a149",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update Service Category",
+					"id": "84abf79f-a28d-4858-986f-17c3ec822090",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Service Category",
+					"id": "7281e9f9-ba44-470f-b4be-d89a15c41a20",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "034227a9-30c8-45b0-8d43-127e1626c67f"
+		},
+		{
+			"name": "Generate",
+			"item": [
+				{
+					"name": "Get All Service Category",
+					"id": "edc33be3-be62-458f-b33b-73ce6d906d28",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host_local}}/service-category"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Prompt",
+					"id": "6b4db125-34da-40e2-a961-770f3aaeb961",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\": \"DREAM NATURE Соль с пеной для ванн 'Лаванда', 500 г\",\r\n    \"keys\": \"природная соль, лечебная соль, соля для ванны, похудение, омолаживание, омолаживающий эффект, выводит токсины\",\r\n    \"service\": \"22\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host_local}}/generate"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Service Category",
+					"id": "727a6617-6fb3-47cd-a612-601f2e05d9b4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update Service Category",
+					"id": "e3cf33f1-3321-42f6-9d28-5ffcd5d56260",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Service Category",
+					"id": "e68696fe-05a8-4d30-a384-a4929a326231",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "965ec86e-80e5-4acb-afd0-365d264beeb9"
 		}
 	]
 }
