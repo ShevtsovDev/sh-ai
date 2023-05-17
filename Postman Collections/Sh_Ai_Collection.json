@@ -47,23 +47,23 @@
 								},
 								{
 									"key": "name",
-									"value": "Ozon",
+									"value": "Описание товара Wildberries",
 									"type": "text"
 								},
 								{
 									"key": "description",
-									"value": "description_ozon",
+									"value": "Получите готовые SEO-тексты, которые поднимут карточку товара в поиске.",
 									"type": "text"
 								},
 								{
 									"key": "icon",
 									"type": "file",
-									"src": "/C:/Users/ryzen/Downloads/ozon_placemark.svg"
+									"src": "/C:/Users/ryzen/Downloads/wb (1).svg"
 								},
 								{
 									"key": "schema",
 									"type": "text",
-									"value": "2"
+									"value": "9"
 								},
 								{
 									"key": "category",
