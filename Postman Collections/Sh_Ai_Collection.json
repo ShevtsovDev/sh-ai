@@ -519,14 +519,14 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"role\": \"user\",\r\n    \"message\": \"Напиши продающее описание для товара - [productName]. Используй следующие ключевые слова без повторения в соседних предложениях - [keys]\",\r\n    \"service\": 22\r\n}",
+							"raw": "{\r\n    \"productName\": \"DREAM NATURE Соль с пеной для ванн 'Лаванда', 500 г\",\r\n    \"keys\": \"природная соль, лечебная соль, соля для ванны, похудение, омолаживание, омолаживающий эффект, выводит токсины\",\r\n    \"service\": \"22\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{host_local}}/prompt"
+						"url": "{{host_local}}/generate"
 					},
 					"response": []
 				},
