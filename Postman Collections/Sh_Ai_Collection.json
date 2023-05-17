@@ -432,7 +432,7 @@
 					"response": []
 				},
 				{
-					"name": "Create Service Category",
+					"name": "Create Prompt",
 					"id": "ae209d47-0f97-4210-bc0d-98775b63593c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
