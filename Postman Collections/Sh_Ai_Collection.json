@@ -414,6 +414,83 @@
 				}
 			],
 			"id": "324fea60-b1e7-498d-9d76-cc1d68ed6fbb"
+		},
+		{
+			"name": "Prompt",
+			"item": [
+				{
+					"name": "Get All Service Category",
+					"id": "823b25c6-1b3e-4ea2-86c4-5a38a2b32f41",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host_local}}/service-category"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Service Category",
+					"id": "ae209d47-0f97-4210-bc0d-98775b63593c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Для повседневных задач\",\r\n    \"description\": \"Делегируйте важные и не очень дела ИИ-помощникам. Получите готовый контент-план, статью или соберите отзывы о своем товаре.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host_local}}/service-category"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Service Category",
+					"id": "36ca2c34-c704-478c-9707-8908dc71a149",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update Service Category",
+					"id": "84abf79f-a28d-4858-986f-17c3ec822090",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Service Category",
+					"id": "7281e9f9-ba44-470f-b4be-d89a15c41a20",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "034227a9-30c8-45b0-8d43-127e1626c67f"
 		}
 	]
 }
