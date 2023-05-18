@@ -504,7 +504,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{host_local}}/service-category"
+						"url": "{{host_local}}/generate"
 					},
 					"response": []
 				},
