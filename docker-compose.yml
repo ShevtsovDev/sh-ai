@@ -3,12 +3,9 @@ services:
     build:
       dockerfile: Dockerfile
       context: .
-      target: development
-    env_file:
+      target: production
+    env_filex:
       - .env
-    volumes:
-      - .:/usr/src/app
-    command: npm run start:dev
     ports:
       - 3000:3000
     depends_on:

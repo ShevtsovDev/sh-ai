@@ -58,12 +58,12 @@
 								{
 									"key": "icon",
 									"type": "file",
-									"src": "/C:/Users/ryzen/Downloads/wb (1).svg"
+									"src": "/Users/vladislavsevcov/Downloads/wb.svg"
 								},
 								{
 									"key": "schema",
 									"type": "text",
-									"value": "9"
+									"value": "1"
 								},
 								{
 									"key": "category",
@@ -186,11 +186,15 @@
 						"disableBodyPruning": true
 					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {}
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"schema\": {\r\n        \"fields\": [\r\n            {\r\n                \"type\": \"text\",\r\n                \"placeholder\": \"Какой-то текст\",\r\n                \"name\": \"text\",\r\n                \"maxLength\": 100,\r\n                \"minLength\": 10,\r\n                \"required\": true,\r\n                \"groupName\": \"productName\",\r\n                \"label\": \"Название товара\"\r\n            },\r\n            {\r\n                \"type\": \"textarea\",\r\n                \"placeholder\": \"Какой-то текст\",\r\n                \"name\": \"textarea\",\r\n                \"groupName\": \"keys\",\r\n                \"label\": \"Ключи\"\r\n            }\r\n        ],\r\n        \"groups\": [\r\n            {\r\n                \"groupName\": \"productName\",\r\n                \"title\": \"Введите название товара\",\r\n                \"subtitle\": \"Напишите название вашего товара. (прим.: Увлажняющая маска Tutti-Frutti)\"\r\n            },\r\n            {\r\n                \"groupName\": \"keys\",\r\n                \"title\": \"Ключи\",\r\n                \"subtitle\": \"Введите ваши ключевые слова\"\r\n            }\r\n        ]\r\n    }\r\n}",
+							"raw": "{\r\n    \"schema\": {\r\n        \"fields\": [\r\n            {\r\n                \"type\": \"textarea\",\r\n                \"placeholder\": \"Пример: \",\r\n                \"name\": \"text\",\r\n                \"maxLength\": 250,\r\n                \"minLength\": 10,\r\n                \"required\": true,\r\n                \"groupName\": \"text\",\r\n                \"label\": \"Опишите что происходит в видео\"\r\n            }\r\n        ],\r\n        \"groups\": [\r\n            {\r\n                \"groupName\": \"text\",\r\n                \"title\": \"Опишите что происходит в видео\",\r\n                \"subtitle\": \"\"\r\n            }\r\n        ]\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -442,7 +446,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"role\": \"user\",\r\n    \"message\": \"Напиши продающее описание для товара - [productName]. Используй следующие ключевые слова без повторения в соседних предложениях - [keys]\",\r\n    \"service\": 22\r\n}",
+							"raw": "{\r\n    \"role\": \"user\",\r\n    \"message\": \"Напиши продающее описание для товара - [productName]. Используй следующие ключевые слова без повторения в соседних предложениях - [keys]\",\r\n    \"service\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -504,7 +508,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{host_local}}/service-category"
+						"url": "{{host_local}}/generate"
 					},
 					"response": []
 				},
