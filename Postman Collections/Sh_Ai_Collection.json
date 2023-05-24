@@ -47,27 +47,27 @@
 								},
 								{
 									"key": "name",
-									"value": "Сценарий для YouTube",
+									"value": "Описание товара Wildberries",
 									"type": "text"
 								},
 								{
 									"key": "description",
-									"value": "Успешные селлеры снимают на YouTube экспертные видео. Получите сценарии для развития канала.",
+									"value": "Получите готовые SEO-тексты, которые поднимут карточку товара в поиске.",
 									"type": "text"
 								},
 								{
 									"key": "icon",
 									"type": "file",
-									"src": "/Users/vladislavsevcov/Downloads/youtube.svg"
+									"src": "/Users/vladislavsevcov/Downloads/wb.svg"
 								},
 								{
 									"key": "schema",
 									"type": "text",
-									"value": "15"
+									"value": "1"
 								},
 								{
 									"key": "category",
-									"value": "2",
+									"value": "1",
 									"type": "text"
 								}
 							]
