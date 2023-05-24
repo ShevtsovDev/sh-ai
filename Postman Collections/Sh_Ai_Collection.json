@@ -47,27 +47,27 @@
 								},
 								{
 									"key": "name",
-									"value": "Описание товара Wildberries",
+									"value": "Сценарий для YouTube",
 									"type": "text"
 								},
 								{
 									"key": "description",
-									"value": "Получите готовые SEO-тексты, которые поднимут карточку товара в поиске.",
+									"value": "Успешные селлеры снимают на YouTube экспертные видео. Получите сценарии для развития канала.",
 									"type": "text"
 								},
 								{
 									"key": "icon",
 									"type": "file",
-									"src": "/Users/vladislavsevcov/Downloads/wb.svg"
+									"src": "/Users/vladislavsevcov/Downloads/youtube.svg"
 								},
 								{
 									"key": "schema",
 									"type": "text",
-									"value": "1"
+									"value": "15"
 								},
 								{
 									"key": "category",
-									"value": "1",
+									"value": "2",
 									"type": "text"
 								}
 							]
@@ -446,7 +446,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"role\": \"user\",\r\n    \"message\": \"Напиши продающее описание для товара - [productName]. Используй следующие ключевые слова без повторения в соседних предложениях - [keys]\",\r\n    \"service\": 1\r\n}",
+							"raw": "{\r\n    \"role\": \"user\",\r\n    \"message\": \"Я хочу чтоб ты написал мне кликбейтный и захватывающий диалог для ТикТок видео на следующую тему - [text]. Старайся быть более человечным и проявлий больше эмпатии.\",\r\n    \"service\": 14\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
