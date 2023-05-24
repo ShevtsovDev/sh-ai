@@ -47,27 +47,27 @@
 								},
 								{
 									"key": "name",
-									"value": "Описание товара Wildberries",
+									"value": "Сценарий для YouTube",
 									"type": "text"
 								},
 								{
 									"key": "description",
-									"value": "Получите готовые SEO-тексты, которые поднимут карточку товара в поиске.",
+									"value": "Успешные селлеры снимают на YouTube экспертные видео. Получите сценарии для развития канала.",
 									"type": "text"
 								},
 								{
 									"key": "icon",
 									"type": "file",
-									"src": "/Users/vladislavsevcov/Downloads/wb.svg"
+									"src": "/Users/vladislavsevcov/Downloads/youtube.svg"
 								},
 								{
 									"key": "schema",
 									"type": "text",
-									"value": "1"
+									"value": "15"
 								},
 								{
 									"key": "category",
-									"value": "1",
+									"value": "2",
 									"type": "text"
 								}
 							]
@@ -369,7 +369,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Для повседневных задач\",\r\n    \"description\": \"Делегируйте важные и не очень дела ИИ-помощникам. Получите готовый контент-план, статью или соберите отзывы о своем товаре.\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Для маркетплейсов\",\r\n    \"description\": \"Внедрите ИИ в бизнес. Набор уникальных сервисов для маркетплейсов улучшит работу селлеров, сэкономит время и деньги. Подходит для Wildberries, Ozon, Amazon.\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
