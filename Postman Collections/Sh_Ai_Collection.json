@@ -47,27 +47,27 @@
 								},
 								{
 									"key": "name",
-									"value": "Экстрактор ключевых слов",
+									"value": "Копирайтер",
 									"type": "text"
 								},
 								{
 									"key": "description",
-									"value": "Посмотрите ключи вирусных статей, текстов конкурентов и сделайте еще лучше.",
+									"value": "Напишите сочную статью - пускай о вашем бизнесе узнает больше людей!",
 									"type": "text"
 								},
 								{
 									"key": "icon",
 									"type": "file",
-									"src": "/Users/vladislavsevcov/Downloads/youtube.svg"
+									"src": "/Users/vladislavsevcov/Downloads/square.svg"
 								},
 								{
 									"key": "schema",
 									"type": "text",
-									"value": "15"
+									"value": "10"
 								},
 								{
 									"key": "category",
-									"value": "2",
+									"value": "3",
 									"type": "text"
 								}
 							]
@@ -194,7 +194,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"schema\": {\r\n        \"fields\": [\r\n            {\r\n                \"type\": \"textarea\",\r\n                \"placeholder\": \"Пример: \",\r\n                \"name\": \"text\",\r\n                \"maxLength\": 130,\r\n                \"minLength\": 10,\r\n                \"required\": true,\r\n                \"groupName\": \"text\",\r\n                \"label\": \"В двух словах опишите идею.\"\r\n            }\r\n        ],\r\n        \"groups\": [\r\n            {\r\n                \"groupName\": \"text\",\r\n                \"title\": \"Опишите что происходит в видео\",\r\n                \"subtitle\": \"\"\r\n            }\r\n        ]\r\n    }\r\n}",
+							"raw": "{\r\n    \"schema\": {\r\n        \"fields\": [\r\n            {\r\n                \"type\": \"textarea\",\r\n                \"placeholder\":\"\",\r\n                \"name\": \"text\",\r\n                \"maxLength\": 250,\r\n                \"minLength\": 10,\r\n                \"required\": true,\r\n                \"groupName\": \"text\",\r\n                \"label\": \"На какую тему желаете сгенерировать текст?\"\r\n            }\r\n        ],\r\n        \"groups\": [\r\n            {\r\n                \"groupName\": \"text\",\r\n                \"title\": \"\",\r\n                \"subtitle\": \"\"\r\n            }\r\n        ]\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
