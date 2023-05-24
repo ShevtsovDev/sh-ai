@@ -2,7 +2,7 @@ import { TypeOrmModuleOptions } from '@nestjs/typeorm';
 
 export const getDatabaseConfig = (): TypeOrmModuleOptions => ({
   type: 'postgres',
-  host: 'sh-ai-service-postgres-1',
+  host: 'sh-ai-postgres-1',
   port: 5432,
   username: 'sh_ai_admin',
   password: 'qwer1234',

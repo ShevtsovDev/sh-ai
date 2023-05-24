@@ -3,6 +3,7 @@ import {
   CreateDateColumn,
   Entity,
   JoinColumn,
+  OneToMany,
   OneToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
@@ -32,6 +33,6 @@ export class ServiceSchema {
   })
   created_at: Date;
 
-  @OneToOne(() => Service, (service) => service.schema)
-  service: Service
+  @OneToMany(() => Service, (service) => service.schema)
+  service: Service;
 }

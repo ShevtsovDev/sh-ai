@@ -7,33 +7,50 @@ import { Repository } from 'typeorm';
 
 @Injectable()
 export class GenerateProcessService {
-
   constructor(
     @InjectRepository(GenerateProcess)
-    private readonly generateRepository: Repository<GenerateProcess>
-  ) {
-  }
+    private readonly generateRepository: Repository<GenerateProcess>,
+  ) {}
   async create(createGenerateProcessDto: CreateGenerateProcessDto) {
-    const newProcess = await this.generateRepository.create({...createGenerateProcessDto, service: {id: createGenerateProcessDto.service}})
-    return (await this.generateRepository.save(newProcess))
-
+    const newProcess = await this.generateRepository.create({
+      ...createGenerateProcessDto,
+      service: { id: createGenerateProcessDto.service },
+    });
+    return await this.generateRepository.save(newProcess);
   }
 
   findAll() {
     return `This action returns all generateProcess`;
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} generateProcess`;
+  async findOne(id: number, userId: number) {
+    const processes = await this.generateRepository.find({
+      where: {
+        user_id: userId,
+        service: {
+          id: id,
+        },
+      },
+      order: {
+        id: 'DESC',
+      },
+    });
+
+    return processes;
   }
 
   async update(id: number, updateGenerateProcessDto: UpdateGenerateProcessDto) {
-    const updatedProcess = await this.generateRepository.update(id, { status: updateGenerateProcessDto.status, response: updateGenerateProcessDto.response})
+    const updatedProcess = await this.generateRepository.update(id, {
+      status: updateGenerateProcessDto.status,
+      response: updateGenerateProcessDto.response,
+    });
 
-    return updatedProcess
+    return updatedProcess;
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} generateProcess`;
+  async remove(id: number) {
+    try {
+      await this.generateRepository.delete(id);
+    } catch (e) {}
   }
 }

@@ -14,7 +14,10 @@ export class ContentService {
   ) {
   }
 
-  async upload(icon: Express.Multer.File, token: string): Promise<ContentInterface[]> {
+  async upload(
+    icon: Express.Multer.File,
+    token: string,
+  ): Promise<ContentInterface[]> {
     try {
       const filePath = path.join(__dirname, 'image', icon.originalname);
       console.log(filePath);

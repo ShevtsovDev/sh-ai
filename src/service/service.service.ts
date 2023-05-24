@@ -8,17 +8,19 @@ import { ContentService } from '../../libs/common/src/content/content.service';
 
 @Injectable()
 export class ServiceService {
-
   constructor(
     private readonly contentService: ContentService,
     @InjectRepository(Service)
-
     private readonly serviceService: Repository<Service>,
-  ) {
-  }
+  ) {}
 
-  async create(createServiceDto: CreateServiceDto, icon: Express.Multer.File, token: string) {
+  async create(
+    createServiceDto: CreateServiceDto,
+    icon: Express.Multer.File,
+    token: string,
+  ) {
     try {
+      console.log(icon);
       const uploadedFile = await this.contentService.upload(icon, token);
       const newService = await this.serviceService.create({
         ...createServiceDto,
@@ -27,7 +29,7 @@ export class ServiceService {
         category: { id: createServiceDto.category },
       });
 
-      return (await this.serviceService.save(newService));
+      return await this.serviceService.save(newService);
     } catch (e) {
       throw new HttpException(e.message, HttpStatus.BAD_REQUEST);
     }
@@ -35,7 +37,9 @@ export class ServiceService {
 
   async findAll() {
     try {
-      const services = await this.serviceService.find({ relations: ['schema', 'category', 'prompts'] });
+      const services = await this.serviceService.find({
+        relations: ['schema', 'category', 'prompts'],
+      });
       return services;
     } catch (e) {
       throw new HttpException(e.message, HttpStatus.BAD_REQUEST);

@@ -2,8 +2,10 @@ import {
   Column,
   CreateDateColumn,
   Entity,
-  JoinColumn, ManyToMany,
-  ManyToOne, OneToMany,
+  JoinColumn,
+  ManyToMany,
+  ManyToOne,
+  OneToMany,
   OneToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
@@ -38,16 +40,15 @@ export class Service {
   })
   created_at: Date;
 
-  @OneToOne(() => ServiceSchema, (serviceSchema) => serviceSchema.id)
-  @JoinColumn({ name: 'schema'})
-
+  @ManyToOne(() => ServiceSchema, (serviceSchema) => serviceSchema.id)
+  @JoinColumn({ name: 'schema' })
   schema: ServiceSchema;
 
   @ManyToOne(() => ServiceCategory, (serviceCategory) => serviceCategory.id)
-  @JoinColumn({name: 'category'})
+  @JoinColumn({ name: 'category' })
   category: ServiceCategory;
 
-  @OneToMany(() => Prompt, prompt => prompt.service)
-  @JoinColumn({name: 'prompts'})
-  prompts: Prompt[]
+  @OneToMany(() => Prompt, (prompt) => prompt.service)
+  @JoinColumn({ name: 'prompts' })
+  prompts: Prompt[];
 }
