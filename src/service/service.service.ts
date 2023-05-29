@@ -46,11 +46,11 @@ export class ServiceService {
     }
   }
 
-  async findOne(id: number) {
+  async findOne(slug: string) {
     try {
       const services = await this.serviceService.findOne({
         where: {
-          id,
+          slug,
         },
         relations: ['schema', 'prompts'],
       });

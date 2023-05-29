@@ -2,7 +2,8 @@ import {
   Body,
   Controller,
   Delete,
-  Get, HttpCode,
+  Get,
+  HttpCode,
   HttpException,
   HttpStatus,
   Param,
@@ -25,14 +26,22 @@ export class ServiceController {
 
   @Post()
   @UseInterceptors(FileInterceptor('icon'))
-  async create(@Body() createServiceDto: CreateServiceDto, @UploadedFile() icon: Express.Multer.File, @ExtractToken() token) {
-    const errors = await validate(plainToClass(CreateServiceDto, createServiceDto));
+  async create(
+    @Body() createServiceDto: CreateServiceDto,
+    @UploadedFile() icon: Express.Multer.File,
+    @ExtractToken() token,
+  ) {
+    const errors = await validate(
+      plainToClass(CreateServiceDto, createServiceDto),
+    );
     if (!errors.length) {
       return this.serviceService.create(createServiceDto, icon, token);
     }
 
-    const formattedErrors = errors.map(error => ({[error.property]: Object.values(error.constraints)}))
-    throw new HttpException(formattedErrors, HttpStatus.BAD_REQUEST)
+    const formattedErrors = errors.map((error) => ({
+      [error.property]: Object.values(error.constraints),
+    }));
+    throw new HttpException(formattedErrors, HttpStatus.BAD_REQUEST);
   }
 
   @Get()
@@ -41,8 +50,8 @@ export class ServiceController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.serviceService.findOne(+id);
+  findOne(@Param('slug') slug: string) {
+    return this.serviceService.findOne(slug);
   }
 
   @Patch(':id')
