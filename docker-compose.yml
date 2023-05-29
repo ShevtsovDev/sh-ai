@@ -10,6 +10,15 @@ services:
     depends_on:
       - postgres
 
+  adminer:
+    image: adminer:latest
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - postgres
+      - api
+
   postgres:
     image: postgres
     restart: always
