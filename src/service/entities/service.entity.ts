@@ -22,7 +22,7 @@ export class Service {
   @Column()
   name: string;
 
-  @Column()
+  @Column({ default: 'test' })
   slug: string;
 
   @Column()
