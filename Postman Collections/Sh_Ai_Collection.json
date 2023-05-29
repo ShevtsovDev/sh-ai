@@ -47,27 +47,27 @@
 								},
 								{
 									"key": "name",
-									"value": "Описание товара Wildberries",
+									"value": "Копирайтер",
 									"type": "text"
 								},
 								{
 									"key": "description",
-									"value": "Получите готовые SEO-тексты, которые поднимут карточку товара в поиске.",
+									"value": "Напишите сочную статью - пускай о вашем бизнесе узнает больше людей!",
 									"type": "text"
 								},
 								{
 									"key": "icon",
 									"type": "file",
-									"src": "/Users/vladislavsevcov/Downloads/wb.svg"
+									"src": "/Users/vladislavsevcov/Downloads/square.svg"
 								},
 								{
 									"key": "schema",
 									"type": "text",
-									"value": "1"
+									"value": "10"
 								},
 								{
 									"key": "category",
-									"value": "1",
+									"value": "3",
 									"type": "text"
 								}
 							]
@@ -194,7 +194,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"schema\": {\r\n        \"fields\": [\r\n            {\r\n                \"type\": \"textarea\",\r\n                \"placeholder\": \"Пример: \",\r\n                \"name\": \"text\",\r\n                \"maxLength\": 250,\r\n                \"minLength\": 10,\r\n                \"required\": true,\r\n                \"groupName\": \"text\",\r\n                \"label\": \"Опишите что происходит в видео\"\r\n            }\r\n        ],\r\n        \"groups\": [\r\n            {\r\n                \"groupName\": \"text\",\r\n                \"title\": \"Опишите что происходит в видео\",\r\n                \"subtitle\": \"\"\r\n            }\r\n        ]\r\n    }\r\n}",
+							"raw": "{\r\n    \"schema\": {\r\n        \"fields\": [\r\n            {\r\n                \"type\": \"textarea\",\r\n                \"placeholder\": \"Пример: \",\r\n                \"name\": \"text\",\r\n                \"maxLength\": 130,\r\n                \"minLength\": 10,\r\n                \"required\": true,\r\n                \"groupName\": \"text\",\r\n                \"label\": \"В двух словах опишите идею.\"\r\n            }\r\n        ],\r\n        \"groups\": [\r\n            {\r\n                \"groupName\": \"text\",\r\n                \"title\": \"Опишите что происходит в видео\",\r\n                \"subtitle\": \"\"\r\n            }\r\n        ]\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -446,7 +446,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"role\": \"user\",\r\n    \"message\": \"Напиши продающее описание для товара - [productName]. Используй следующие ключевые слова без повторения в соседних предложениях - [keys]\",\r\n    \"service\": 1\r\n}",
+							"raw": "{\r\n    \"role\": \"user\",\r\n    \"message\": \"Я хочу чтоб ты написал мне кликбейтный и захватывающий диалог для ТикТок видео на следующую тему - [text]. Старайся быть более человечным и проявлий больше эмпатии.\",\r\n    \"service\": 14\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
