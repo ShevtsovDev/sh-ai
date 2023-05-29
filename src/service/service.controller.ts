@@ -49,7 +49,7 @@ export class ServiceController {
     return this.serviceService.findAll();
   }
 
-  @Get(':id')
+  @Get(':slug')
   findOne(@Param('slug') slug: string) {
     return this.serviceService.findOne(slug);
   }
