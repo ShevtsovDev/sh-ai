@@ -1,11 +1,12 @@
 import { IsDefined, IsEmail, IsInt, IsNotEmpty } from 'class-validator';
 
 export class CreateServiceDto {
-    name: string;
-    description: string
+  name: string;
+  slug: string;
+  description: string;
 
-    schema: number
+  schema: number;
 
-    @IsNotEmpty()
-    category: number
+  @IsNotEmpty()
+  category: number;
 }

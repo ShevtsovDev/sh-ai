@@ -21,6 +21,10 @@ export class Service {
   id: number;
   @Column()
   name: string;
+
+  @Column()
+  slug: string;
+
   @Column()
   description: string;
 
