@@ -38,6 +38,12 @@ export class Service {
   })
   updated_at: Date;
 
+  @Column()
+  seoTitle: string;
+
+  @Column()
+  seoDescription: string;
+
   @CreateDateColumn({
     type: 'timestamp',
     default: () => 'CURRENT_TIMESTAMP(6)',
